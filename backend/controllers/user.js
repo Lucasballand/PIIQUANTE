@@ -11,6 +11,7 @@ const emailMask2Options = {
 };
 
 exports.signup = (req, res, next) => {
+    console.log('console log marches', 'sign', req)
   bcrypt.hash(req.body.password, 10)
     .then(hash => {
       const user = new User({
